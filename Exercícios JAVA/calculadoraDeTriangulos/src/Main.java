@@ -7,23 +7,22 @@ public class Main {
     Scanner sc = new Scanner(System.in);
     Locale.setDefault(Locale.US);
 
-    double xA, xB, xC, yA, yB, yC;
+    triangulos x, y; //Variavel tringulo do tipo x e y
+    x = new triangulos(); //instanciar / criar o objeto
+    y = new triangulos();
 
     System.out.println("Digite os valores dos lados dos triangulos: ");
-    xA = sc.nextDouble();
-    xB = sc.nextDouble();
-    xC = sc.nextDouble();
+    x.A = sc.nextDouble();
+    x.B = sc.nextDouble(); //Para ler o Nº inteiro e guardar no atributo B no Objeto X
+    x.C = sc.nextDouble(); //Basta colocar o Obejeto x. e escolher o atributo que quer acessar
 
     System.out.println("Digite os valores dos lados dos triangulos: ");
-    yA = sc.nextDouble();
-    yB = sc.nextDouble();
-    yC = sc.nextDouble();
+    y.A = sc.nextDouble();
+    y.B = sc.nextDouble();
+    y.C = sc.nextDouble();
 
-    double p = (xA + xB + xC) / 2.0;
-    double areaX = Math.sqrt(p * (p - xA) * (p - xB) * (p - xC));
-
-    p = (yA + yB + yC) / 2.0;
-    double areaY = Math.sqrt(p * (p - yA) * (p - yB) * (p - yC));
+    double areaX = x.area();//chamei o metodo que vai calcular a area de ada triangulo
+    double areaY = y.area();
 
     System.out.printf("O triangulo X tem a area de : %.4f%n", areaX);
     System.out.printf("O triangulo y tem a area de : %.4f%n", areaY);
