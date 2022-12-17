@@ -4,6 +4,12 @@ public class Produtos {
     public double preco;
     public int quantidade;
 
+    public Produtos (String nome, double preco, int quantidade) { //Construtor
+        this.nome = nome; //this estou me referindo ao atributo do Objeto
+        this.preco = preco;
+        this.quantidade = quantidade;
+    }
+
     public double totalNoEstoque (){
         return preco * quantidade;
     }
