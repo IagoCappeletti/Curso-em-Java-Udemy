@@ -4,10 +4,17 @@ public class Produtos {
     public double preco;
     public int quantidade;
 
+    public Produtos() { //Construtor padrão
+
+    }
     public Produtos (String nome, double preco, int quantidade) { //Construtor
         this.nome = nome; //this estou me referindo ao atributo do Objeto
         this.preco = preco;
         this.quantidade = quantidade;
+    }
+    public Produtos (String nome, double preco ) { //Construtor
+        this.nome = nome;
+        this.preco = preco;
     }
 
     public double totalNoEstoque (){
