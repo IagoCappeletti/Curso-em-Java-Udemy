@@ -1,8 +1,10 @@
+package entidade;
+
 public class Produtos {
 
-    public String nome;
-    public double preco;
-    public int quantidade;
+    private String nome;
+    private double preco;
+    private int quantidade;
 
     public Produtos() { //Construtor padrão
 
@@ -16,6 +18,28 @@ public class Produtos {
         this.nome = nome;
         this.preco = preco;
     }
+
+    public String getNome () {
+        return nome;
+    }
+
+    public void setNome (String nome) {
+        this.nome = nome;
+    }
+
+    public double getPreco () {
+        return preco;
+    }
+
+    public void setPreco (double preco) {
+        this.preco = preco;
+    }
+
+    public int getQuantidade() {
+        return quantidade;
+    }
+
+
 
     public double totalNoEstoque (){
         return preco * quantidade;
