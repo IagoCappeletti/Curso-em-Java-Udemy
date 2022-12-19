@@ -7,7 +7,6 @@ public class Produtos {
     private int quantidade;
 
     public Produtos() { //Construtor padrão
-
     }
     public Produtos (String nome, double preco, int quantidade) { //Construtor
         this.nome = nome; //this estou me referindo ao atributo do Objeto
@@ -18,28 +17,25 @@ public class Produtos {
         this.nome = nome;
         this.preco = preco;
     }
-
-    public String getNome () {
+    public String getNome() {
         return nome;
     }
 
-    public void setNome (String nome) {
+    public void setNome(String nome) {
         this.nome = nome;
     }
 
-    public double getPreco () {
+    public double getPreco() {
         return preco;
     }
 
-    public void setPreco (double preco) {
+    public void setPreco(double preco) {
         this.preco = preco;
     }
 
     public int getQuantidade() {
         return quantidade;
     }
-
-
 
     public double totalNoEstoque (){
         return preco * quantidade;
