@@ -24,7 +24,7 @@ public class Main {
 
         double soma = 0.0;
         for (int i = 0; i < vect.length; i++){
-            soma += vect[i].getPreco();
+            soma += vect[i].getPreco(); //acessando o vetor na posição i e querendo acesar apenas o preço
         }
 
         double media = soma / vect.length;
