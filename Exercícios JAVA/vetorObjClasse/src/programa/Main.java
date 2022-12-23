@@ -33,5 +33,7 @@ public class Main {
         //Utilizando o vect.length fica mais coeso porque o vetor sabe o tamanho dele.
 
         System.out.printf("A média dos valores é: %.2f%n", media);
+
+        sc.close();
     }
 }
