@@ -47,7 +47,7 @@ public class Program {
         }
 
         System.out.println();
-        System.out.println("PRICE TAGS: ");
+        System.out.println("PRICE TAGS: " );
         for (Product prod: list){
             System.out.println(prod.priceTag());
         }
