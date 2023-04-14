@@ -13,9 +13,9 @@ public class Program {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Informe os dados da conta: ");
-        System.out.print("number: ");
+        System.out.print("Número: ");
         int number = sc.nextInt();
-        System.out.print("holder: ");
+        System.out.print("Titular: ");
         sc.nextLine();
         String holder = sc.nextLine();
         System.out.print("Saldo inicial: ");
@@ -31,7 +31,7 @@ public class Program {
 
         try {
             acc.withdraw(amount);
-            System.out.printf("New balance: %.2f%n", acc.getBalance());
+            System.out.printf("Saldo Atualizado: %.2f%n", acc.getBalance());
         }
         catch (BusinessException exception){
             System.out.println(exception.getMessage());
