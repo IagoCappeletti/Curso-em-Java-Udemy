@@ -48,6 +48,9 @@ public class Reservation {
         if (checkIn.before(now) || checkOut.before(now)){
            throw new DomainException( "Error in reservation: reservation dates for updates must be future dates");
         }
+        if (!checkOut.after(checkIn)) {
+            throw new DomainException("Check-out date must be after check-in date");
+        }
         this.checkIn = checkIn;
         this.checkOut = checkOut;
     }
