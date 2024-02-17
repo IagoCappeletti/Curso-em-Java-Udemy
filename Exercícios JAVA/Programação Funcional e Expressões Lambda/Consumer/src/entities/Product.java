@@ -26,31 +26,12 @@ public class Product {
         this.price = price;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Product product = (Product) o;
-
-        if (Double.compare(price, product.price) != 0) return false;
-        if (name != null ? !name.equals(product.name) : product.name != null) return false;
-
-        return true;
-    }
-
-    @Override
-    public int hashCode() {
-        int result;
-        long temp;
-        result = name != null ? name.hashCode() : 0;
-        temp = Double.doubleToLongBits(price);
-        result = 31 * result + (int) (temp ^ (temp >>> 32));
-        return result;
-    }
+   public static void staticPriceUpdate(Product p) {
+        p.setPrice(p.getPrice() * 1.1);
+   }
 
     @Override
     public String toString() {
-        return "name: " + name + ", price: " + price;
+        return "name: " + name + ", price: " +String.format("%.2f", price);
     }
 }
