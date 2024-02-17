@@ -5,6 +5,7 @@ import util.UpperCaseName;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class Program {
@@ -17,8 +18,10 @@ public class Program {
         list.add(new Product("Tablet", 350.50));
         list.add(new Product("HD Case", 80.90));
 
+        Function<Product, String> func = product -> product.getName().toUpperCase();
+
         //Aplicando a função UpperCasaName a cada elemento da lista através do map
-         List<String> names = list.stream().map(Product::nonStaticUpperCaseName).toList();
+         List<String> names = list.stream().map(func).toList();
 
          names.forEach(System.out::println);
 
